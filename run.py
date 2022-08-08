@@ -13,13 +13,14 @@ SCOPE = [
     "https://www.googleapis.com/auth/drive"
     ]
 
-creds = json.load(open('creds.json'))
+creds = json.load(open('cred.json'))
 CREDS = Credentials.from_service_account_info(creds)
 SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open("python-cows")
 
 calves = SHEET.worksheet("calves")
+print(calves)
 
 def welcome():
     print("╔═╗┌─┐┬  ┬  ┬┌─┐┌─┐")
@@ -61,7 +62,7 @@ def date_of_birth():
         
   
         print("Lovely")
-        update_calves_worksheet()
+        # update_calves_worksheet()
         animal_sex()
         
     elif question2.lower() == ("no"):
@@ -76,26 +77,25 @@ def animal_sex():
     question3 = input("\n Is the calf a bull of heifer?\n")
     if question3.lower() == ("bull"):
         print("It's a boy")
-        update_calves_worksheet()
+        # update_calves_worksheet()
     elif question3.lower() == ("heifer"):
         print("it's a girl")
-        update_calves_worksheet()
+        # update_calves_worksheet()
     else:
         print("Sorry invalid entry.")
         print("Plese enter bull or heifer")
         animal_sex()
 
-def update_calves_worksheet():
-    """
-    This will update the calves worksheet
-    in the google spreadsheet, and add a new row
-    to the list
-    """
-    print("Updating calves list...\n")
-    dob = date_of_birth() 
-    calves_worksheet = SHEET.worksheet("calves")
-    calves_worksheet.append_row(dob)
-    print("Spreadsheet updated")
+# def update_calves_worksheet():
+#     """
+#     This will update the calves worksheet
+#     in the google spreadsheet, and add a new row
+#     to the list
+#     """
+#     print("Updating calves list...\n")
+#     calves_worksheet = SHEET.worksheet("calves")
+#     calves_worksheet.append_row(calves)
+#     print("Spreadsheet updated")
 
 
 
@@ -105,7 +105,6 @@ welcome()
 new_birth()
 date_of_birth()
 animal_sex()
-update_calves_worksheet()
-
+# update_calves_worksheet()
 
 

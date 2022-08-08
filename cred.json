@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "python-calves-practice",
+  "private_key_id": "7508e2308ed16c096c999d3a4b8cb54eb7a5e803",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCea9/YJazZkEkS\nd73QyNWY3evAXCo3c6CZA1hA/Hwna1Feu5tOYNCsQqhs/0y/nq6rhLOMgpqcdfqJ\neiERXffRpbewlVlIIA8jlvVJVVNlgfjgbXudLZiudfNhduUkWIoTuEzxGWqCY8qn\n4jv2uaQ2VTWax7vD/tVMlLOuES0uIU4EWQjQzJpwp4l1iteWHC87HbqtFs/TaJBd\nqxQa4G5ZtFmwc9qsXcfi4GKASjXGr+6ntduMd8VsCErPHaW1o62nGw6jR/sNmS77\nEaM5DZrE68vwDiL6XsXletV/k5lnVfyy2+IMJQs0fWKPD/cKBSB9FuelXwdhGdEG\nM8uwE6ttAgMBAAECggEAAcXxHQdbX0TvSOT3jWJ8w1e2yHyjKapl4ZCSBPvARx4C\nZZjVUGlGV1V8HZNSawqoxBJEZnGO6COleno7szAQhH43eT+g7N7bcBQZJsIXvRkg\ncSDd7DtaM0KY8a/kHLRB49cPmPe0hww1kShicFPfnnJKmxZ3BDwniGCSnBG6Cbwg\nuLkv3TTI5iPqEf8RuoETTbedjieJJoTBuOYtFh/NVpLHAw7lNB3vPJMpw3lrO6zB\npKMjm51kuBO1SW520Zr3c5+r7OqHIMj4Tox45nA0pzZgmdJ9rhmHCx1sivnV3eS4\nwvIACz7INJ+ZT4STCtdJ8FMICqcbss19cvtC7dQtwQKBgQDfQkLuVe6aaDdjv8c9\nJU8dA+sxSi/daqZXtE8GGnH1y7jblp9JZ0aXv5DR300t6TCpLAttmZQgItlfHVAU\ntBdGNHKR5n1mXD+s3H4YznY9GPliI8CFf6+WWK7JTJQCrfZG4ApuiwHZyowcnTLN\nQM81c3/d7u03ezvbK0BR0UWFVQKBgQC1p3C2TOKJ/F3Ff7NCGjRwFmHdYNCzB7IV\nftGhA3TJABlW/pB2eKdF6E8i+uyTT2zRwQjhUOu/6n98oTdWgeUQsYx+PQ9G1mKq\niXtN1yqRIwSMURRSlxzBgwR4UpXS2ByhstVfD7NSWS6QAVZCa0G+gJq11XO0tUrV\nWfdiiM0NuQKBgQC6nSxNA88ZiZsi6Z6kYZcrbacd4CD6NrcsAC89rsUq60ptYg1q\n0cST+zAV/U0J3y0pewNibUj/Q6Hmex4A8De0GwrZIYwYD2u6FePg4FK85y8s9S1r\naTtftGkFIdlmE/sTaxnNJKw7W66aDFv2bQHGb/CllZz7DysNG637ta0isQKBgFQX\nGOQrH0uFGduNS+wzuUaR9efHI5Vc4KF2vY/ty6godZKB8VoGbFi+O7QTuGRRBizr\nUTMMhLWo1i9ZagaPxvw9VK4zkdjW8YHEduIH0tqw/S//cIrzDQq/ndgdUuHxzP9F\ni+SfngFm61kaZVYF1L9dRUEbeJ6Utfmh1hU1AsdxAoGBAKczcoBPmkVwqyvr9MHx\nv4g6P40XO+dmgSgJecUqbHm5ESRy2Bus46CbLSCneLyyTl1oipK4QznlCfaf8M0U\n9NoVFHowmORObDYmE/9rinATKTDG8SxhdzGpfAUSwm1XsnhKSmXYbz5D3yqysof1\nrrNZIEupV+mNtK+fqga0nzPx\n-----END PRIVATE KEY-----\n",
+  "client_email": "pythoncalves@python-calves-practice.iam.gserviceaccount.com",
+  "client_id": "104334315461367519382",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/pythoncalves%40python-calves-practice.iam.gserviceaccount.com"
+}
