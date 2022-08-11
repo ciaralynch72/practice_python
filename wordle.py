@@ -7,14 +7,29 @@ from colorama import Fore, Back, Style
 colorama.init(autoreset=True)
 import pyfiglet
 
-def introduction_message():
-    print(pyfiglet.figlet_format("Welcome to Destination Unknown", justify="center"))
+print(pyfiglet.figlet_format("Welcome to Destination Unknown"))
 
-introduction_message()
+
+def introduction_message():  
+    while True:
+        name = input("What is your name?\n")
+        if name.isalpha():
+            print(f"Good day {name} !")
+            print("Try to guess the county by choosing a letter.")
+            print("You have x tries.")
+            print("If you try to guess same letter twice :")
+            print("*if it is not in the word you will loose attempt.")
+            print(f"GOOD LUCK {name}!")
+            choose_word()
+        else:
+            print("I do not understand, add letters only.\n")
+            introduction_message()
 
 
 def choose_word():
-    word = random.choice(country).lower()
+    word = random.choice(country)
+    while '-' in word or ' ' in word:
+        word = random.choice(country)
     return word
 
 
@@ -30,7 +45,7 @@ def word_in_progress(word, guesses):
 
 def main(word):
     lettersguessed = []
-    chances = 6
+    chances = len(word)*int(1.5)
     name = input("What is your name?\n")
 # Here the user is asked to enter the name first
  
@@ -42,6 +57,7 @@ def main(word):
             print("\nYou have " + str(chances) + " chances left.")
             time.sleep(2)
             print("Word so far: " + word_in_progress(word, lettersguessed))
+            time.sleep(2)
             print(Fore.LIGHTGREEN_EX + "Letters guessed: " + str(lettersguessed))
             guess = input("Guess: ").lower()[0]
 
@@ -68,4 +84,21 @@ while True:
     main(word)
     if input("Would you like to continue: ").lower().startswith("n"):
         break
+# def validate_data(values):
+#     """
+#     Inside the try, converts all string values into integers.
+#     Raises ValueError if strings cannot be converted into int,
+#     or if there aren't exactly 6 values.
+#     """
 
+#     try:
+#         [int(value) for value in values]
+#         if len(values) != 6:
+#             raise ValueError(
+#                 f"Exactly 6 values are required, you provided {len(values)}")
+
+#     except ValueError as e:
+#         print(f"Invalid data: {e}, please try again\n")
+#         return False
+
+#     return True
