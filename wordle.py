@@ -42,13 +42,23 @@ def word_in_progress(word, guesses):
             word_in_progress += "*"
     return word_in_progress
 
+def play_again():
+    play_again = input("Would you like to continue yes or no?: ")
+    if play_again == ("yes"):
+        choose_word()
+    elif play_again == ("no"):
+        print("Thank you for playing")
+    else:
+        print("Sorry invalid entry.")
+        print("Plese enter yes or no.")
+        play_again()
 
 def main(word):
     lettersguessed = []
     chances = len(word)*int(1.5)
     name = input("What is your name?\n")
 # Here the user is asked to enter the name first
- 
+
     print(f'"Good Luck "{name}')
     print(Fore.CYAN + "You are looking for a word that is " + str(len(word)) + " letters long.")
 
@@ -69,11 +79,11 @@ def main(word):
                 break
 
             else:
-                chances -= 1
                 if guess in word:
                     print("Correct letter!")
                 else:
                     print(guess + " is not in the word.")
+                    chances -= 1
         else:
             print("\nOops you ran out of guesses. The correct word was " + word)
             break
@@ -82,8 +92,10 @@ def main(word):
 while True:
     word = choose_word()
     main(word)
-    if input("Would you like to continue: ").lower().startswith("n"):
-        break
+    play_again()
+
+
+  
 # def validate_data(values):
 #     """
 #     Inside the try, converts all string values into integers.
