@@ -10,18 +10,22 @@ colorama.init(autoreset=True)
 import pyfiglet
 
 
-print(pyfiglet.figlet_format("Destination Unknown"))
+print(pyfiglet.figlet_format("Destination Unknown", justify="centre"))
 
 
 def introduction_message():
     while True:
-        name = input(f"{Fore.GREEN+Style.BRIGHT}What is your name?\n")
+        name = input(f"{Fore.GREEN}What is your name?\n")
 
         if not name.isalpha():
-            print(f"{Fore.RED+Style.BRIGHT}Your name must be alphabetic only")
+            print(f"{Fore.LIGHTYELLOW_EX}Your name must be alphabetic only")
             continue
         else:
+            print("Destination unknown is a word guessing game")
+            print("where you are trying to guess the name of a country!")
+            print("You chances will be based on 1.5 * the lenght of letters in the country")
             print(f'Good luck, {name}!')
+
             break
    
    
@@ -61,20 +65,16 @@ FIREWORKS = """
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 """
 
-def main(word): #change main to start game
+def main(word): #change main to start_game
     lettersguessed = [] #change to player_guesses
     chances = len(word)*int(1.5)
-  
-# Here the user is asked to enter the name first
-
-    
-    print(Fore.CYAN + "You are looking for a word that is " + str(len(word)) + " letters long.")
+    print(Fore.CYAN + "You are looking for a country that is " + str(len(word)) + " letters long.")
 
     while True:
         if chances != 0:
             print("\nYou have " + str(chances) + " chances left.")
             time.sleep(1)
-            print("Word so far: " + word_in_progress(word, lettersguessed))
+            print("Country so far: " + word_in_progress(word, lettersguessed))
             time.sleep(1)
             print(Fore.LIGHTGREEN_EX + "Letters guessed: " + str(lettersguessed))
             guess = input("Guess: ").lower()[0]
@@ -130,12 +130,12 @@ def play_again():
 #         break
 
 
-def clear_screen():
-    """
-    Used to clear Terminal screen
-    Credit: https://www.101computing.net/python-typing-text-effect/
-    """
-    os.system("clear")
+# def clear_screen():
+#     """
+#     Used to clear Terminal screen
+#     Credit: https://www.101computing.net/python-typing-text-effect/
+#     """
+#     os.system("clear")
 
 while True:
     word = choose_word()
